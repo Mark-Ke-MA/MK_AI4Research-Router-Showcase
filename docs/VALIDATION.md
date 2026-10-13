@@ -1,5 +1,7 @@
 # 验证记录与限制
 
+中文 | [English](../docs_en/VALIDATION.md)
+
 ## 复现所选测试
 
 在已安装 Go 1.26+、Python 3、C 编译器和系统 SQLite 的 macOS 环境中：

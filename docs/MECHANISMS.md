@@ -1,5 +1,7 @@
 # 核心机制与取舍
 
+中文 | [English](../docs_en/MECHANISMS.md)
+
 ## 1. 将“不确定”作为持久状态
 
 远端模型 turn 可能已经开始，而调用方丢失了响应。盲目重试可能重复昂贵或改变状态的工作。worker 在写入 app-server **之前**先持久化 `submitted` 意图；只有传输层确认尚未提交的 `PreSubmitError` 才允许自动重试。越过这一边界的其他失败进入 `uncertain_post_submit`，等待明确的 reconciliation。

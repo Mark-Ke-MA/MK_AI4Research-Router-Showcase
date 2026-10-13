@@ -1,5 +1,7 @@
 # 架构与职责边界
 
+中文 | [English](../docs_en/ARCHITECTURE.md)
+
 ## 围绕上游 runtime 构建的持久化消息桥
 
 私人系统中，每个人格有独立的 Router、数据库、app-server 连接、Codex home 和平台绑定。数据库维护哪个 thread 是 canonical `main`；展示标题不决定身份。预定会话不可用时，平台适配器不能因此擅自新建替代会话。
